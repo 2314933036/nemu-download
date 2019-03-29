@@ -1,3 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.video-btn{
+		      position: absolute;
+		      width:1000px;
+		      height: 680px;
+		      background:black;
+		      top:50px;
+		      left: 0px;
+		      right: 0px;
+		      margin: 0 auto;
+		      display: none;
+		      z-index: 101;
+		    }
+		 .video-area{
+		      width:100%;
+		      height: 100%;
+		      background:black;
+		    }
+		 iframe{
+		 	width: 100%;
+		 	height: 100%;
+		 }
+
+		.video-shut{
+		      height:25px;
+		      width:25px;
+		      border-radius: 12.5px;
+		      font-size:medium;
+		      color:black;
+		      float:left;
+		      text-align: center;
+		      font-weight: bolder;
+		      background: white;
+		      display: block;
+		      position: absolute;
+		      top: -15px;
+		      right: -15px;
+
+		    }
+		#shadow{
+		     position: absolute;
+		     opacity: 0.5;
+		     filter:alpha(opacity=50);
+		     bottom:0;
+		     left: 0;
+		     right: 0;
+		     top: 0;
+		     background:black;
+		     z-index: 100;
+		     display: none;
+		   }
+	</style>
+
+</head>
+<body>
+	<center>
+		<div class="main" style="height: 100px;margin-top: 100px;">
+		  <a href="javascript:;" class="video" id="video"><img src="https://i2.hdslb.com/bfs/archive/3abdced50dec1755d44281c5d5c2a3822c43ebdb.png@203w_127h_1e_1c.webp"></a>
+		</div>
+		<div class="video-btn" id="video-btn">
+			<div class="video-area" id="video-area"></div>
+			<a class="video-shut" id="video-shut">×</a>
+		</div>
+		<div id="shadow"></div>
+	</center>
+</body>
+</html>
+<script type="text/javascript">
+
+  var obtn=document.getElementById('video');
+  var ovideo=document.getElementById('video-btn');
+  var oatn=document.getElementById('video-area');
+  var oshut=document.getElementById('video-shut');
+  var oshadow=document.getElementById('shadow');
+  obtn.onclick=function () {
+    ovideo.style.display='block';
+    oshadow.style.display='block';
+    oatn.innerHTML='<iframe src="https://player.bilibili.com/player.html?aid=47701192&cid=83553719&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>';
+  }
+  oshut.onclick= function () {
+    ovideo.style.display='none';
+    oshadow.style.display='none';
+    oatn.innerHTML="";
+  }
+</script>
+
+
+
+
 <a href="http://a11.gdl.netease.com/nemu-2.1.9-x64-0328161849.exe">nemu-2.1.9-x64-2.exe</a><br>
 <a href="http://a11.gdl.netease.com/nemu-hypervisor-5.0.14-x64-0328170517.exe">nemu-2.1.9-x64-1.exe</a><br>
 <a href="http://a11.gdl.netease.com/nemu-2.1.9-x86-0328172545.exe">nemu-2.1.9-x86-2.exe</a><br>
